@@ -1,0 +1,146 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, ul, ol, li, pre,button, input, textarea, th, td{ -webkit-tap-highlight-color: transparent; outline: 0; margin: 0; padding: 0; vertical-align: baseline; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline; }
+img { border: 0 none; vertical-align: top; }
+i, em { font-style: normal; }
+ol, ul { list-style: none; }
+input, select, button, h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: inherit; }
+table { border-collapse: collapse; border-spacing: 0; }
+a { text-decoration: none; }
+body { margin: 0 auto; min-width: 320px;width: 100%; height: 100%; line-height: 1; font-size: 14px; fon-family: -apple-system,Helvetica,sans-serif,"宋体"; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+textarea{
+  vertical-align: top;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+/* HTML5 可选使用 */
+body {
+  -webkit-touch-callout:none;/* 禁止长按页面，iOS系统弹出默认菜单 */
+  -webkit-text-size-adjust: none;
+}
+/*
+  retina屏幕下border：1px 问题
+*/
+.border-top-1{
+  background:linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%) top;
+  background-size: 100% 1px;
+}
+.border-bottom-1{
+  background:linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%) bottom;
+  background-size: 100% 1px;
+}
+.bd-top-1,.bd-bottom-1{
+  position: relative;
+}
+.bd-top-1:after,.bd-bottom-1:before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  border-bottom: 1px solid #ccc;
+  transform: scaleY(.5);
+  -webkit-transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+}
+[type="button"]{
+  outline: none;
+}
+input[disabled]{
+  background-color: #fff;
+}
+.scroll{
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+html{
+  font-size: 14px;
+}
+/* 计算方式  屏幕像素尺寸/750 * 2 * 100  */
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 106.666666px;
+  }
+}
+@media screen and (min-width: 440px) {
+  html {
+    font-size: 117.333333px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 128px;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 170.6666666px;
+  }
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 200px;
+  }
+}
+
+/* iPhone5 */
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 85.333333px;
+  }
+}
+/* iPhone6 */
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 100px;
+  }
+}
+/* iPhone6+ */
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 110.4px;
+  }
+}
+
+
+/* iphone5 */
+@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){ }
+/*魅族*/
+@media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 2.5){ }
+/*mate7*/
+@media only screen and (min-device-width :1080px) and (-webkit-min-device-pixel-ratio : 3){ }
+/*4 4s*/
+@media only screen and (device-height :480px) and (-webkit-device-pixel-ratio:2){  }
+@media screen and (min-width: 320px) and (max-width: 480px) {  }
+
+/* 横屏 */
+@media all and (orientation :landscape) {
+}
+/* 竖屏 */
+@media all and (orientation :portrait) {
+}
