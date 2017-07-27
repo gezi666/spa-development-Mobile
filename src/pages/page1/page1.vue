@@ -1,14 +1,17 @@
 <template lang="html">
     <div class="page1">
-       这是page1,{{msg}}
-       <button @click="change">点击切换</button>
-       <button @click="change2">点击切换2</button>
-       <router-view></router-view>
+       <div>
+         {{msg}},这是page1页面
+         <br/><br/><br/>
+         <button @click="change">点击切换</button>
+         <button @click="change2">点击切换2</button>
+         <router-view></router-view>
+       </div>
     </div>
 </template>
 
 <script>
-import {hello} from 'common/js/hello'
+import {hello} from '@/assets/js/hello'
 export default {
   data(){
     return {

@@ -21,15 +21,14 @@ export default {
 
 <style lang="css" scoped>
 .tab{
-  height: 44px;
-  line-height: 44px;
+  height: 0.6rem;
+  line-height: 0.6rem;
   font-size:14px;
   position: fixed;
   bottom: 0;
   left:0;
   width: 100%;
-  background: #222;
-
+  background-color:rgba(0,0,0,.1);
 }
 .tab .tab-item{
   width: 33%;
@@ -39,7 +38,7 @@ export default {
 
 .tab .tab-item .tab-link{
   padding-bottom: 5px;
-  color: rgba(255, 255, 255, 0.5)
+  color: #222;
 }
 .tab .tab-item.router-link-active i{ color: red}
 .tab .tab-item.router-link-active .tab-link{

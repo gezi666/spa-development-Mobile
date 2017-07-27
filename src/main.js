@@ -2,7 +2,9 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import axios from 'axios';
-import './common/css/index.css';
+/* 公用js */
+import common from '@/assets/js/common';
+import '@/assets/css/index.css';
 
 Vue.config.productionTip = false;
 /* 使用axios进行配置，ajax请求 */
@@ -15,4 +17,3 @@ new Vue({
   router,
   render: h => h(App)
 });
-//document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.75  + 'px';

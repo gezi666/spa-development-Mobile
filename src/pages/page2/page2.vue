@@ -1,11 +1,11 @@
 <template lang="html">
     <div class="page2">
-       这是page2,{{msg}}
+       {{msg}}，page2页面
     </div>
 </template>
 
 <script>
-import {hello} from 'common/js/hello'
+import {hello} from '@/assets/js/hello'
 export default {
   data(){
     return {
@@ -13,8 +13,8 @@ export default {
     }
   },
   created(){
-    this.msg = hello('哈哈哈')
-  },
+    this.msg = hello('欢迎来到')
+  }
 }
 </script>
 

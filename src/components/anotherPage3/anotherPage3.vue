@@ -2,10 +2,9 @@
   <transition name="slide">
     <div class="anotherPage">
        <div class="back" @click="back">
-        << back
+        << 返回
        </div>
-
-       this is  anotherPage3
+       这是组件  anotherPage3
     </div>
   </transition>
 </template>
@@ -28,7 +27,8 @@ export default {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #222;
+  padding: 10px;
+  background-color: #440044;
 }
 .back{
   height: 30px; line-height: 30px;

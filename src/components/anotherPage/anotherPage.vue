@@ -2,9 +2,10 @@
   <transition name="slide">
     <div class="anotherPage">
        <div class="back" @click="back">
-        << back
+        << 返回
        </div>
-        this is  anotherPage1
+        这是组件 anotherPage1
+        <br/><br/><br/>
         <button @click="change"> 再切换</button>
         <router-view></router-view>
     </div>
@@ -35,7 +36,8 @@ export default {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #222;
+  padding: 10px;
+  background-color: #008800;
   color: #fff;
 }
 .back{

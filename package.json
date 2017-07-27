@@ -2,7 +2,7 @@
   "name": "my-project",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "weibin <weibsgz@126.com>",
+  "author": "",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

@@ -73,6 +73,10 @@ input[disabled]{
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+button{
+  line-height: 0.3rem;
+  padding: 0 10px;
+}
 html{
   font-size: 14px;
 }
