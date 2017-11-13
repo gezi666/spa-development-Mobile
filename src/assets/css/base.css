@@ -42,25 +42,23 @@ body {
 /*
   retina屏幕下border：1px 问题
 */
-.border-top-1{
-  background:linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%) top;
-  background-size: 100% 1px;
-}
-.border-bottom-1{
-  background:linear-gradient(180deg, #ccc, #ccc 50%, transparent 50%) bottom;
-  background-size: 100% 1px;
-}
 .bd-top-1,.bd-bottom-1{
   position: relative;
 }
 .bd-top-1:after,.bd-bottom-1:before{
   content: "";
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  border-bottom: 1px solid #ccc;
+  left: 0;  right: 0;
+  border-bottom: 1px solid #b2b2b2;
   transform: scaleY(.5);
   -webkit-transform: scaleY(.5);
   -webkit-transform-origin: 0 0;
+}
+.bd-top-1:after{
+  top: 0;
+}
+.bd-bottom-1:before{
+  bottom: 0;
 }
 [type="button"]{
   outline: none;
@@ -73,64 +71,43 @@ input[disabled]{
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-button{
-  line-height: 0.3rem;
-  padding: 0 10px;
-}
 html{
   font-size: 14px;
 }
-/* 计算方式  屏幕像素尺寸/750 * 2 * 100  */
-@media screen and (min-width: 360px) {
-  html {
-    font-size: 96px;
-  }
+.content{
+  padding: 20px;
 }
-@media screen and (min-width: 400px) {
-  html {
-    font-size: 106.666666px;
-  }
+.child-view {
+   position: absolute;
+   width:100%;
+   /*transition: all .2s cubic-bezier(.55,0,.1,1);*/
+   transition: all .2s linear;
 }
-@media screen and (min-width: 440px) {
-  html {
-    font-size: 117.333333px;
-  }
+.slide-left-enter, .slide-right-leave-active {
+   -webkit-transform: translate3d(100%,0,0);
+   transform: translate3d(100%,0,0);
 }
-@media screen and (min-width: 480px) {
-  html {
-    font-size: 128px;
-  }
-}
-@media screen and (min-width: 640px) {
-  html {
-    font-size: 170.6666666px;
-  }
-}
-@media screen and (min-width: 750px) {
-  html {
-    font-size: 200px;
-  }
+.slide-left-leave-active, .slide-right-enter {
+   -webkit-transform: translate3d(-100%,0,0);
+   transform: translate3d(-100%,0,0);
 }
 
-/* iPhone5 */
-@media screen and (min-width: 320px) {
-  html {
-    font-size: 85.333333px;
-  }
-}
-/* iPhone6 */
-@media screen and (min-width: 375px) {
-  html {
-    font-size: 100px;
-  }
-}
-/* iPhone6+ */
-@media screen and (min-width: 414px) {
-  html {
-    font-size: 110.4px;
-  }
+.mint-header{
+   height: 60px;
+   background-color: rgba(45,43,50,0.9);
+   background:-webkit-gradient(linear, 0 0, 0 bottom, from(rgba(45,43,50,0.9)), to(rgba(45,43,50,0.8)));
+   color:#fff;
+   font-size: 0.30rem;
 }
 
+
+.mint-header-title{
+   line-height: 30px;
+}
+.mintui-back{
+   position: relative;
+   top: -0.03rem;
+}
 
 /* iphone5 */
 @media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){ }

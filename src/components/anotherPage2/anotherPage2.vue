@@ -1,19 +1,17 @@
 <template lang="html">
-  <transition name="slide">
     <div class="anotherPage">
-       <div class="back" @click="back">
-        << 返回
-       </div>
-       这是组件  anotherPage2
+        <mt-header title="标题过长会隐藏后面的内容啊哈哈哈哈">
+            <mt-button icon="back" slot="left" @click="back">返回</mt-button>
+            <mt-button icon="more" slot="right"></mt-button>
+        </mt-header>
+        <div class="content">这是组件  anotherPage2</div>
     </div>
-  </transition>
 </template>
-
 <script>
 export default {
   methods:{
     back(){
-      this.$router.go(-1)
+      this.$router.goBack();
     }
   }
 }
@@ -27,18 +25,8 @@ export default {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 10px;
   background-color: #C21F39;
   color: #fff;
 }
-.back{
-  height: 30px; line-height: 30px;
-}
 
-.slide-enter-active,.slide-leave-active{
-  transition:all 0.3s
-}
-.slide-enter,.slide-leave-to {
-  transform:translate3d(100%,0,0);
-}
 </style>

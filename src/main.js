@@ -1,17 +1,15 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import axios from 'axios';
-/* 公用js */
 import common from '@/assets/js/common';
+import MintUI from 'mint-ui';
+import 'mint-ui/lib/style.css';
 import '@/assets/css/index.css';
 
+Vue.use(MintUI);
 Vue.config.productionTip = false;
-/* 使用axios进行配置，ajax请求 */
-axios.defaults.baseURL = 'http://ip:port/';
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-axios.defaults.timeout = 30000;
-Vue.prototype.$axios = axios;
+Vue.prototype.slideName = 'slide-left';
+
 new Vue({
   el: '#app',
   router,
