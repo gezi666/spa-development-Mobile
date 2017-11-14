@@ -1,6 +1,6 @@
 <template>
     <div class="body">
-        <span class="appName">标题</span>
+        <span class="appName">标题：没有密码</span>
         <div class="input-box">
             <input type="text" id="username" v-model="username" placeholder="请输入账号或手机号">
             <i class="iconfont icon-shanchu" @click="clear()"></i>
@@ -130,7 +130,7 @@
     }
     .input-box .iconfont{
         position: absolute;
-        top: 0.34rem;
+        top: 0.32rem;
         right: 0.24rem;
     }
     .input-box input:focus + .iconfont{
