@@ -17,7 +17,8 @@ window.onload = function(){
 /**
  *  使用axios进行配置，ajax请求
  * */
-axios.defaults.baseURL = 'http://ip:port/';
+//axios.defaults.baseURL = 'http://ip:port/';
+axios.defaults.baseURL = 'http://mock.eolinker.com/';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 axios.defaults.timeout = 30000;
 /**
@@ -33,15 +34,15 @@ Vue.prototype.$http = {
     }
 };
 function httpSend(type,params,onCallBack) {
-    let param = null;
-    if(type=='get'){
-        param = params.data;
-    }else{
+    let param = '';
+    let url = params;
+    if(type=='post'){
         param = qs.stringify(params.data);
+        url = params.url;
     }
     axios({
         method: type,
-        url: params.url,
+        url: url,
         data:param
     }).then(function (response) {
         /* code==0表示成功  */
@@ -50,7 +51,7 @@ function httpSend(type,params,onCallBack) {
         }else{
 
         }
-    }).catch(function(){
+    }).catch(function(error){
         throw new Error('网络异常');
     });
 }
