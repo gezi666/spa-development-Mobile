@@ -18,6 +18,7 @@
     </div>
 </template>
 <script>
+import {HomeHttp} from '@/api/homeHttp';
 import {hello} from '@/assets/js/hello';
 export default {
     name:'homeInfo',
@@ -43,7 +44,7 @@ export default {
            });
         },
         queryList(){
-            this.$http.Get('ZXF1aEK62a6c81919359967c3fba0fe8cbb83c9e9046f38?uri=mob/query/list',(res)=>{
+            HomeHttp.queryList({}).then((res)=>{
                 this.list = res.data.list;
             });
         }

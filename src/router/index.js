@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 Vue.use(Router);
-import Main from 'components/main/main';
+import MainComps from 'components/main/mainComps';
 import FooterTab from 'components/tab/footerTab';
 import Login from 'pages/login/login';
 import Home from 'pages/home/home';
@@ -31,7 +31,7 @@ export default new Router({
       {
           path: '/home',
           name: 'home',
-          component: Main,
+          component: MainComps,
           children: [
              {
                 path: '/',
@@ -57,7 +57,7 @@ export default new Router({
       {
           path: '/page2',
           name: 'page2',
-          component: Main,
+          component: MainComps,
           children: [
               {
                   path: '/',
@@ -71,7 +71,7 @@ export default new Router({
       {
           path: '/page3',
           name: 'page3',
-          component: Main,
+          component: MainComps,
           children: [
               {
                   path: '/',
@@ -85,7 +85,7 @@ export default new Router({
       {
           path: '/page4',
           name: 'page4',
-          component: Main,
+          component: MainComps,
           children: [
               {
                   path: '/',

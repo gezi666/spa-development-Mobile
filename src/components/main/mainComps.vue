@@ -10,7 +10,7 @@
 </template>
 <script>
     export default {
-        name: 'main',
+        name: 'mainComps',
         beforeRouteUpdate (to, from, next) {
             if(to.path.length<from.path.length){
                 this.$router.isBack = true;
